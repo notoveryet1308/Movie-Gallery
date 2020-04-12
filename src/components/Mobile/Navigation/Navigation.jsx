@@ -4,6 +4,9 @@ import NavigationMenu from './NavigationMenu';
 
 function Navigation() {
     const [barClicked, setBarClicked] = useState(false);
+    const handleClick = ()=>{
+        setBarClicked(!barClicked);
+    }
     return (
         <>
             {!barClicked ?
@@ -12,12 +15,12 @@ function Navigation() {
                         <LogoText movie='true'>Movie</LogoText>
                         <LogoText gallery='true'>Gallery</LogoText>
                     </LogoTextBox>
-                    <SandwichIconBox onClick={() => setBarClicked(true)}>
+                    <SandwichIconBox onClick={handleClick}>
                         <Bar />
                         <MiddleBar />
                         <Bar />
                     </SandwichIconBox></NavContainer> :
-                <NavigationMenu />
+                <NavigationMenu handleClick={handleClick}/>
             }
         </>
     )
