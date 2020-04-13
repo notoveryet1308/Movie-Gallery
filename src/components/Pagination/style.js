@@ -16,8 +16,9 @@ export const PaginationWrapper = styled.div`
  /* background: #333; */
  .fas{
      font-size: 2rem;
-     color: black;
-     background: #eee;
+     color: #F3B20A;
+     background: #CFCACA;
+     border-radius: 2px;
      padding: .4rem .8rem;
      cursor: pointer;
  }
