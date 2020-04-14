@@ -1,8 +1,17 @@
 import React from 'react'
 import {MoviePosterContainer, PosterImage, Image, RatingBox} from './style';
-function MoviePoster({poster, rating}) {
+import {useDispatch} from 'react-redux';
+import {setMoviedetail} from '../../redux/MovieDeatilReducer/action';
+import {withRouter} from 'react-router-dom';
+function MoviePoster({poster,name, rating, movie, history}) {
+    const dispatch = useDispatch();
+    const handleClick = ()=>{
+         dispatch(setMoviedetail(movie));
+         name = (name.split(' ').join('-')).toLowerCase();
+         history.push(`/detail/:${name}`);
+    }
     return (
-        <MoviePosterContainer>
+        <MoviePosterContainer onClick = {handleClick}>
             <RatingBox>
                 <span>{rating}</span>
             </RatingBox>
@@ -15,4 +24,4 @@ function MoviePoster({poster, rating}) {
     )
 }
 
-export default MoviePoster
+export default withRouter(MoviePoster)
