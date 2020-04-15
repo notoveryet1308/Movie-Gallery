@@ -33,7 +33,7 @@ function Moviedetail({ history }) {
                 <MovieTitle>
                     {currMovie.title}
                 </MovieTitle>
-                <RatingStar rating={currMovie.rating} />
+                <RatingStar rating={currMovie.vote_average} />
                 <Plot>
                     {currMovie.overview}
                 </Plot>

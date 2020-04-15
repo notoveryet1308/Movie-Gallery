@@ -51,6 +51,7 @@ export const FooterLink = styled(Link)
   font-family: 'roboto';
   color: #000;
   &:hover{
+     transition: all 300ms ease;
       font-weight: bold;
   }
 

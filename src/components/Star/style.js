@@ -1,9 +1,16 @@
 import styled from 'styled-components';
 export const RatingContainer = styled.div`
-  width: 100%;
   margin: 1rem 0;
   display: flex;
   justify-content: flex-start;
+  align-items:center;
+  font-size: 1.3rem;
+  span{
+    font-family: 'roboto';
+    font-weight: bold;
+    color: #39BE27;
+    font-size: 2.5rem;
+  }
 
 `
 export const FullStar = styled.div`

@@ -1,13 +1,10 @@
 import React from 'react';
-import { RatingContainer, FullStar } from './style';
+import { RatingContainer } from './style';
 
 function RatingStar({rating}) {
     return (
         <RatingContainer>
-           <FullStar/>
-           <FullStar/>
-           <FullStar/>
-           <FullStar/>
+            <span >{rating}</span>/10
         </RatingContainer>
     )
 }
