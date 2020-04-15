@@ -8,6 +8,7 @@ import axios from 'axios';
 import {useDispatch, useSelector} from 'react-redux';
 import {getMovies} from '../../redux/NowPlayingReducer/action';
 import Pagination from '../../components/Pagination/Pagination';
+import Footer from '../../components/Footer/Footer';
 
 const NOWPLAYING_API = 'https://api.themoviedb.org/3/movie/now_playing?api_key=ba714c8ff1283f8aad22d462218768f2&language=en-US&page=';
 function Homepage() {
@@ -29,6 +30,7 @@ function Homepage() {
             <Hero/>
             <NowPlaying/>
             <Pagination/>
+            <Footer/>
         </HomepageContainer>
     )
 }

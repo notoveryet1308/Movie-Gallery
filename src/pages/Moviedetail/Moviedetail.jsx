@@ -4,9 +4,11 @@ import { getSimilarMovie } from '../../redux/MovieDeatilReducer/action';
 import axios from 'axios';
 import Navigation from '../../components/Mobile/Navigation/Navigation';
 import { withRouter } from 'react-router-dom';
-import { MoviedeatilContainer, MainPoster, MovieInfo, MovieTitle, Plot, Info, SimilarMovieText, SimilarMovieTextBox, SimilarMovies, Movies } from './style';
+import { MoviedeatilContainer, MainPoster, MovieInfo, MovieTitle, Plot, Info, SimilarMovieText, SimilarMovieTextBox, SimilarMovies, Movies, NoneFound } from './style';
 import RatingStar from '../../components/Star/RatingStar';
 import MoviePoster from '../../components/MoviePoster/MoviePoster';
+import Footer from '../../components/Footer/Footer';
+import Loading from '../../components/Loading/Loading';
 
 function Moviedetail({ history }) {
     const detail = useSelector(state => state.moviedetail);
@@ -52,20 +54,24 @@ function Moviedetail({ history }) {
                     <p className='data'>{currMovie.vote_count}</p>
                 </Info>}
             </MovieInfo>
-           { (!loadingMovie && simMovies.length>0) &&<SimilarMovies>
+            <SimilarMovies>
                 <SimilarMovieTextBox>
                     <SimilarMovieText>Similar Movies</SimilarMovieText>
                 </SimilarMovieTextBox>
-                <Movies>
-                { simMovies.map((movie, index)=> 
-                <MoviePoster 
-                  poster={movie.poster_path}
-                  rating={movie.vote_average}
-                  name={movie.title}
-                  movie={movie} />)}
-            </Movies>
-            </SimilarMovies>}
-            
+                {!loadingMovie ? <Movies>
+                    {simMovies.map((movie, index) =>
+                        <MoviePoster
+                            key={index}
+                            poster={movie.poster_path}
+                            rating={movie.vote_average}
+                            name={movie.title}
+                            movie={movie} />)}
+                </Movies> : <Loading />}
+                {(!loadingMovie && simMovies.length === 0) && <NoneFound>
+                    <h1>No Similar movies found</h1>
+                </NoneFound>}
+            </SimilarMovies>
+            <Footer />
         </MoviedeatilContainer>
     )
 }

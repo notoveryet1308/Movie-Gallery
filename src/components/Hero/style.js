@@ -58,41 +58,46 @@ export const MiniGallery = styled.div `
   display:grid;
   grid-template-columns: repeat(12, 1fr);
   grid-template-rows: repeat(12, 1fr);
+  overflow: hidden;
 `
 export const View = styled.img `
  object-fit: cover;
  width: 100%;
  background-size: cover;
  background-position: top;
- ${props => props.img1 && css`
+ background-blend-mode:lighten;
+ /* ${props => props.img1 && css`
  width: 100%;
  height: 100%;
     grid-column: 1/5;
     grid-row: 5/9;
     background-image:linear-gradient(rgba(245, 248, 101, 0.3), rgba(245, 248, 101, 0.4)), url(${idiot});
     
- `}
+ `} */
  ${props => props.img2 && css`
  width: 100%;
  height: 100%;
-    grid-column: 5/9;
-    grid-row: 3/7;
+    grid-column: 1/5;
+    grid-row: 5/11;
     background-image:linear-gradient(rgba(255, 96, 96, 0.47), rgba(255, 96, 96, 0.47)), url(${inception});
     
  `}
  ${props => props.img3 && css`
  width: 100%;
- height: 100%;
+ height: 100%; 
     grid-column: 5/9;
-    grid-row: 7/11;
+    grid-row: 3/10;
+    margin-left: -1px;
+    
     background-image:linear-gradient(rgba(37, 182, 191, 0.31), rgba(37, 182, 191, 0.31)), url(${spidermanverse});
     
  `}
  ${props => props.img4 && css`
  width: 100%;
  height: 100%;
+ margin-left: -1px;
     grid-column: 9/13;
-    grid-row: 5/9;
+    grid-row:   2/9;
     background-image:linear-gradient(rgba(37, 182, 191, 0.31), rgba(37, 182, 191, 0.31)), url(${avenger});
     
  `}

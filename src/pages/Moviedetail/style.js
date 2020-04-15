@@ -81,3 +81,14 @@ export const Movies = styled.div`
   justify-content: space-between;
   align-items: center;
 `
+export const NoneFound = styled.div`
+  width: 100%;
+  height: 30vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  h1{
+    color: rgba(246, 128, 128, 0.8);
+    font-family: 'roboto';
+  }
+`

@@ -7,7 +7,7 @@ export const MoviePosterContainer = styled.div `
    background: #eee;
    margin-bottom: 2rem;
    border-radius: 5px;
-     
+   cursor:pointer;  
 `
 export const PosterImage = styled.div`
   width: 100%;
