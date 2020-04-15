@@ -14,6 +14,7 @@ export const LogoTextBox = styled.div `
   display: flex;
   justify-content: flex-start;
   flex-direction: column;
+  cursor: pointer;
 `
 export const LogoText = styled.h1 `
   font-family: 'roboto';

@@ -1,8 +1,9 @@
 import React, { useState } from 'react';
 import { NavContainer, LogoTextBox, LogoText, SandwichIconBox, Bar, MiddleBar } from './style';
 import NavigationMenu from './NavigationMenu';
+import { withRouter } from 'react-router-dom';
 
-function Navigation() {
+function Navigation({history}) {
     const [barClicked, setBarClicked] = useState(false);
     const handleClick = ()=>{
         setBarClicked(!barClicked);
@@ -11,7 +12,7 @@ function Navigation() {
         <>
             {!barClicked ?
                 <NavContainer>
-                    <LogoTextBox>
+                    <LogoTextBox onClick={()=> history.push('/')}>
                         <LogoText movie='true'>Movie</LogoText>
                         <LogoText gallery='true'>Gallery</LogoText>
                     </LogoTextBox>
@@ -26,4 +27,4 @@ function Navigation() {
     )
 }
 
-export default Navigation
+export default withRouter(Navigation)
