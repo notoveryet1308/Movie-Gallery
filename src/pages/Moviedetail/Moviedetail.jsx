@@ -33,7 +33,7 @@ function Moviedetail({ history }) {
                 <MovieTitle>
                     {currMovie.title}
                 </MovieTitle>
-                <RatingStar rating={currMovie.vote_average} />
+              { currMovie.vote_average !== 0 && <RatingStar rating={currMovie.vote_average} />}
                 <Plot>
                     {currMovie.overview}
                 </Plot>
@@ -49,7 +49,7 @@ function Moviedetail({ history }) {
                     <p className='label'>Polularity:</p>
                     <p className='data'>{currMovie.popularity}</p>
                 </Info>}
-                {currMovie.vote_count && <Info>
+                {currMovie.vote_count !== 0 && <Info>
                     <p className='label'>Total Vote:</p>
                     <p className='data'>{currMovie.vote_count}</p>
                 </Info>}

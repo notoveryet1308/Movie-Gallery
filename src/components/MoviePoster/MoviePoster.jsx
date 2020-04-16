@@ -12,9 +12,9 @@ function MoviePoster({poster,name, rating, movie, history}) {
     }
     return (
         <MoviePosterContainer onClick = {handleClick}>
-            <RatingBox>
+           {rating > 0 && <RatingBox>
                 <span>{rating}</span>
-            </RatingBox>
+            </RatingBox>}
             <PosterImage >
                 <Image 
                     src={`https://image.tmdb.org/t/p/original${poster}`}

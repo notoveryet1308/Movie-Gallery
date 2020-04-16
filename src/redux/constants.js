@@ -17,3 +17,9 @@ export const topRatedMovies = {
     getTopRatedMovie: 'GET_TOP_RATED_MOVIES',
     currentpage: 'SET_PAGE'
 }
+
+export const upComingMovie = {
+    getUpcomingMovie: 'GET_UPCOMING_MOVIES',
+    currentpage:'SET_PAGE',
+    setRegion:'SET_REGION'
+}

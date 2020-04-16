@@ -6,6 +6,7 @@ import Moviedetail from './pages/Moviedetail/Moviedetail';
 import {useSelector} from 'react-redux';
 import Popular from './pages/Popular/Popular';
 import TopRated from './pages/TopRated/TopRated';
+import Upcoming from './pages/Upcoming/Upcoming';
 function App() {
   const currMovieDetail = useSelector(state=> state.moviedetail.movie)
   return (
@@ -18,7 +19,7 @@ function App() {
               currMovieDetail===null ? <Redirect to='/'/>: <Moviedetail/>}/>
           <Route exact path='/popular' component={Popular}/>
           <Route exact path='/top-rated' component={TopRated}/>
-
+          <Route exact path='/upcoming' component={Upcoming}/>
       </Switch>
     </AppContainer>
 

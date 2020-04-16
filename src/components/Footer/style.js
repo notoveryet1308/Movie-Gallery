@@ -5,7 +5,6 @@ import {
     Link
 } from 'react-router-dom';
 export const FooterContainer = styled.div `
-  position: relative;
   width: 100%;
   height: 20vh;
   background-color:rgba(241, 190, 8, 0.76);
