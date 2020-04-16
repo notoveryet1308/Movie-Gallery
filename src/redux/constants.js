@@ -13,3 +13,7 @@
      currentpage: 'SET_PAGE'
  }
 
+export const topRatedMovies = {
+    getTopRatedMovie: 'GET_TOP_RATED_MOVIES',
+    currentpage: 'SET_PAGE'
+}
