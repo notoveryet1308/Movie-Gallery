@@ -7,7 +7,6 @@ function NavigationMenu({ handleClick }) {
     let navMenuWrapper = useRef(null);
     let times1 = useRef(null);
     let times2 = useRef(null);
-    let latest = useRef(null);
     let discover = useRef(null);
     let toprated = useRef(null);
     let popular = useRef(null);
@@ -17,7 +16,7 @@ function NavigationMenu({ handleClick }) {
 
     useEffect(() => {
         tl.to(navMenuWrapper, .5, { visibility: 'vivible', width: `${100}%`, height: `${100}vh`, ease: "power3.out", delay: .2 })
-        .staggerFromTo([latest, discover, toprated, popular, upcoming, search], .8, {
+        .staggerFromTo([ discover, toprated, popular, upcoming, search], .8, {
             x: 60, opacity:0
         }, {
             x: 0,
@@ -45,9 +44,6 @@ function NavigationMenu({ handleClick }) {
             </BackBtnCross>
             <MenuWrapper>
                 <StyledNavLink 
-                   ref={el => latest = el} 
-                   to='/latest'>Latest</StyledNavLink>
-                <StyledNavLink 
                    ref={el => discover = el} 
                    to='/discover'>Discover</StyledNavLink>
                 <StyledNavLink 
@@ -58,7 +54,7 @@ function NavigationMenu({ handleClick }) {
                    to='/popular'>Popular</StyledNavLink>
                 <StyledNavLink 
                    ref={el=> upcoming= el}
-                   to='/upcoming'>Up-Coming</StyledNavLink>
+                   to='/upcoming'>Upcoming</StyledNavLink>
                 <StyledNavLink 
                     ref={el=> search = el}
                     to='/search'>

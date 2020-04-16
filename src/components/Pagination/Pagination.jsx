@@ -1,10 +1,9 @@
 import React from 'react'
 import { PaginationWrapper, PaginationConatiner } from './style';
-import {setPage} from '../../redux/NowPlayingReducer/action';
-import {useSelector, useDispatch} from 'react-redux';
+import {useDispatch} from 'react-redux';
 
-function Pagination() {
-    const page = useSelector(state => state.nowplaying.page);
+function Pagination({page,setPage}) {
+
     const dispatch = useDispatch();
     const handleLeftClick = ()=>{
         if(page !== 1){

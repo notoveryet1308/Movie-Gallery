@@ -9,7 +9,7 @@ import {useDispatch, useSelector} from 'react-redux';
 import {getMovies} from '../../redux/NowPlayingReducer/action';
 import Pagination from '../../components/Pagination/Pagination';
 import Footer from '../../components/Footer/Footer';
-
+import {setPage} from '../../redux/NowPlayingReducer/action';
 const NOWPLAYING_API = 'https://api.themoviedb.org/3/movie/now_playing?api_key=ba714c8ff1283f8aad22d462218768f2&language=en-US&page=';
 function Homepage() {
     const page = useSelector(state => state.nowplaying.page);
@@ -29,7 +29,7 @@ function Homepage() {
             <Navigation />
             <Hero/>
             <NowPlaying/>
-            <Pagination/>
+            <Pagination page={page} setPage={setPage}/>
             <Footer/>
         </HomepageContainer>
     )
