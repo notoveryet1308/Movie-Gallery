@@ -23,3 +23,14 @@ export const upComingMovie = {
     currentpage:'SET_PAGE',
     setRegion:'SET_REGION'
 }
+
+export const genreSelect = {
+    select: 'SELECT',
+    removie:'REMOVE'
+}
+
+export const discoveredMovies = {
+    getMovie: 'GET_MOVIE',
+    currentpage: 'SET_PAGE',
+    setLoadig: 'SET_LOADING'
+}

@@ -7,6 +7,7 @@ import {useSelector} from 'react-redux';
 import Popular from './pages/Popular/Popular';
 import TopRated from './pages/TopRated/TopRated';
 import Upcoming from './pages/Upcoming/Upcoming';
+import Discover from './pages/Discover/Discover';
 function App() {
   const currMovieDetail = useSelector(state=> state.moviedetail.movie)
   return (
@@ -20,6 +21,7 @@ function App() {
           <Route exact path='/popular' component={Popular}/>
           <Route exact path='/top-rated' component={TopRated}/>
           <Route exact path='/upcoming' component={Upcoming}/>
+          <Route exact path='/discover' component={Discover}/>
       </Switch>
     </AppContainer>
 
