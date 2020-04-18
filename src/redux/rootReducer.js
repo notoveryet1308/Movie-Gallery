@@ -6,6 +6,7 @@ import topRatedReducer from './TopRatedReducer/reducer';
 import upcomingMovieReducer from './UpcomingMovieReducer/reducer';
 import discoveredMoviesReducer from './DiscoveredReducer/reducer';
 import genreReducer from './GenreReducer/reducer';
+import searchReducer from './SearchmovieReducer/reducer';
 const rootReducer = combineReducers({
     nowplaying: nowplayingReducer,
     moviedetail: moviedetailReducer,
@@ -13,7 +14,8 @@ const rootReducer = combineReducers({
     toprated: topRatedReducer,
     upcomingmovie: upcomingMovieReducer,
     genre: genreReducer,
-    discoveredmovies: discoveredMoviesReducer
+    discoveredmovies: discoveredMoviesReducer,
+    search: searchReducer
    
 })
 

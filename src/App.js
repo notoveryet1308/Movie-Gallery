@@ -8,6 +8,9 @@ import Popular from './pages/Popular/Popular';
 import TopRated from './pages/TopRated/TopRated';
 import Upcoming from './pages/Upcoming/Upcoming';
 import Discover from './pages/Discover/Discover';
+import Search from './pages/Search/Search';
+
+
 function App() {
   const currMovieDetail = useSelector(state=> state.moviedetail.movie)
   return (
@@ -22,6 +25,8 @@ function App() {
           <Route exact path='/top-rated' component={TopRated}/>
           <Route exact path='/upcoming' component={Upcoming}/>
           <Route exact path='/discover' component={Discover}/>
+          <Route exact path='/search' component={Search}/>
+
       </Switch>
     </AppContainer>
 
