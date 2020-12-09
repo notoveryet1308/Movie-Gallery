@@ -1,0 +1,22 @@
+{
+  "name":"Movie Gallery",
+  "short_name":"MV",
+  "start_url":".",
+  "display":"standalone",
+  "description":"A movie gallery web application",
+  "background_color":"#ccc",
+  "theme_color":"#0071cc",
+  "icons":[
+    {
+      "src":"./icons_movie.png",
+      "size":"96x96",
+      "type":"image/png"
+    },
+    {
+      "src":"./icons_movie.png",
+      "size":"144x144",
+      "type":"image/png"
+    }
+  ]
+
+}

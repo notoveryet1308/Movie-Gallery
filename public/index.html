@@ -1,13 +1,27 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-   
-    <script src="https://kit.fontawesome.com/e5bdcc0cec.js" crossorigin="anonymous"></script>
-    <title>Movie|| Gallery</title>
-  </head>
-  <body>
-    <div id="root"></div>
-  </body>
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="manifest" href="./manifest.json"/>
+  <script src="https://kit.fontawesome.com/e5bdcc0cec.js" crossorigin="anonymous"></script>
+  <title>Movie|| Gallery</title>
+</head>
+
+<body>
+  <div id="root"></div>
+  <script>
+
+    if ('serviceWorker' in navigator) {
+      window.addEventListener('load', () => {
+        navigator.serviceWorker.register('./serviceWorker.js')
+          .then((reg) => console.log("successfull", reg.scope))
+          .catch((err) => console.log('Error', err));
+      })
+    }
+
+  </script>
+</body>
+
 </html>
