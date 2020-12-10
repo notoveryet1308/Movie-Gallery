@@ -1,21 +1,26 @@
 {
   "name":"Movie Gallery",
   "short_name":"MV",
-  "start_url":".",
+  "start_url":"/",
   "display":"standalone",
   "description":"A movie gallery web application",
   "background_color":"#ccc",
   "theme_color":"#0071cc",
   "icons":[
     {
-      "src":"./icons_movie.png",
-      "size":"96x96",
-      "type":"image/png"
+      "src": "./icons_movie.png",
+      "type": "image/png",
+      "sizes": "64x64"
     },
     {
-      "src":"./icons_movie.png",
-      "size":"144x144",
-      "type":"image/png"
+      "src": "./icon-144.png",
+      "type": "image/png",
+      "sizes": "144x144"
+    },
+    {
+      "src": "./icon-192.png",
+      "type": "image/png",
+      "sizes": "192x192"
     }
   ]
 
